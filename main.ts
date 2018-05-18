@@ -525,9 +525,12 @@ namespace Hua_Mbit_Robot {
     
     export enum enServo {
         
-        S1 = 1,
-        S2,
-        S3
+        S1 = 3,
+        S2 = 4,
+        S3 = 5,
+		S4 = 9,
+		S5 = 10,
+		S6 = 11
     }
     export enum CarState {
         //% blockId="Car_Run" block="forward"
@@ -909,7 +912,7 @@ namespace Hua_Mbit_Robot {
         // 50hz: 20,000 us
         let us = (value * 1800 / 180 + 600); // 0.6 ~ 2.4
         let pwm = us * 4096 / 20000;
-        setPwm(num + 2, 0, pwm);
+        setPwm(num, 0, pwm);
 
     }
 
